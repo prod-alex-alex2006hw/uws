@@ -1,14 +1,14 @@
 {
 	"name": "uws",
-	"version": "1.0.0",
+	"version": "0.0.2",
 	"description": "Tiny WebSockets",
 	"main": "uws.js",
-	"author": "multi",
+	"author": "multiple",
 	"contributors": [
     "Alex Hultman <alexhultman@gmail.com> (https://github.com/alexhultman)",
 		"iCrawl <icrawltogo@gmail.com> (https://github.com/iCrawl)"
 	],
-	"license": "Zlib",
+	"license": "MIT",
 	"scripts": {
 		"install": "node-gyp rebuild"
 	},
@@ -19,9 +19,6 @@
 	"homepage": "https://github.com/prod-alex-alex2006hw/uws#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/prod-alex-alex2006hw/uws#readme",
-	},
-	"engines": {
-		"node": ">=6.0.0"
+		"url": "https://github.com/prod-alex-alex2006hw/uws#readme"
 	}
 }
