@@ -3,22 +3,25 @@
 
 ## Why
 
-- port of UWS from C++ for nodejs build since the npm package was pulled.
+- port of UWS from C++ for [DEPRECATED](https://www.reddit.com/r/node/comments/91kgte/uws_has_been_deprecated) nodejs build
 
-## Build
+## Usage
+`uws` tries to mimic `ws` as closely as possible without sacrificing too much performance. In most cases you simply swap `require('ws')` with `require('uws')`:
+
+```javascript
+
+  npm install --save git+https://github.com/prod-alex-alex2006hw/uws.git
+
+  var WebSocketServer = require('uws').Server;
+  var wss = new WebSocketServer({ port: 3000 });
+
+  function onMessage(message) {
+      console.log('received: ' + message);
+  }
+
+  wss.on('connection', function(ws) {
+      ws.on('message', onMessage);
+      ws.send('something');
+  });
 
 ```
-  git clone https://github.com/iot-alex/uws.git
-  cd uws
-  ./runme
-```
-### Use
-
-```
-  npm i --save https://github.com/prod-alex-alex2006hw/uws
-```
-
-### Ref
-
-- Original [README](./README-orig.md) for uws
-- Source [REPO](https://github.com/iot-alex/uws-src) to build this port
